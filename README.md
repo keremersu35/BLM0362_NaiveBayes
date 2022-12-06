@@ -32,3 +32,93 @@ Denetimli öğrenim algoritmalarının kullanım alanlarına dair günlük hayat
 - Ses tanıma: Bir ses tanıma uygulaması (Google Assistant, Siri vb.), kullanıcının söylediği kelimeleri tanıyarak bu kelimeleri metne dönüştürür. Bu tanıma, denetimli öğrenim algoritmaları kullanılarak yapılır.
 - Görüntü tanıma: Bir görüntü tanıma uygulaması (Google Görüntü Tanıma, Microsoft Cognitive Services vb.), verilen bir görüntüde bulunan nesneleri tanıyarak bu nesneleri adlandırır. Bu tanıma, denetimli öğrenim algoritmaları kullanılarak yapılır.
 - Yüz tanıma: Bir yüz tanıma uygulaması (Facebook, Google Photos vb.), verilen bir görüntüde bulunan yüzleri tanıyarak bu yüzleri kişilere eşleştirir. Bu tanıma, denetimli öğrenim algoritmaları kullanılarak yapılır.
+  
+  ## Bayes Teoremi
+  
+  Bayes Teoremi, bir olayın gerçekleşme olasılığını belirlemek için kullanılan bir matematiksel kavramdır. Bu teoremin kullanımı, bir olayın gerçekleşme olasılığının, olayın belirli bir koşula bağlı olarak gerçekleşme olasılığının değişimi ile ilgilidir. Örneğin, bir insanın grip olma olasılığının, insanın grip aşısı yaptırıp yaptırmadığına bağlı olarak değiştiğini düşünün. Bayes Teoremi, bu değişimin nasıl hesaplanacağını açıklar.
+
+Bayes Teoremi, Thomas Bayes tarafından geliştirilmiştir ve 1763 yılında yayınlanmıştır. Bu teorem, başlangıçta teoloji ve filozofide kullanılmış, ancak daha sonra diğer alanlarda da kullanılmaya başlanmıştır. Özellikle makine öğrenimi ve istatistik alanlarında sıklıkla kullanılmaktadır.
+  
+  <p align="center"><img width="500"  src="Images/thomas.png">
+    
+    Bayes Teoremi, bir olayın gerçekleşme olasılığını belirlemek için iki temel koşula dayanır. Bunlar, olayın koşullu olasılığı ve olayın koşulsuz olasılığıdır. Koşullu olasılık, bir olayın belirli bir koşula bağlı olarak gerçekleşme olasılığıdır. Örneğin, insanın grip olma olasılığının grip aşısı yaptırıp yaptırmadığına bağlı olarak değiştiğini düşündüğümüzde, grip aşısı yaptıran insanların grip olma olasılığı koşullu olasılık olarak adlandırılır. Koşulsuz olasılık ise bir olayın koşul olmaksızın gerçekleşme olasılığıdır. Örneğin, insanların grip olma olasılığı koşulsuz olasılık olarak adlandırılır.
+
+Bayes Teoremi, koşullu olasılık ve koşulsuz olasılığı birleştirerek bir olayın gerçekleşme olasılığını belirleyen bir matematiksel ifadedir. Örneğin, grip aşısı yaptıran insanların grip olma olasılığını (P(A|B)) belirlemek istersek, Bayes Teoremi'ni kullanabiliriz. Bu durumda, Bayes Teoremi'ni şu şekilde kullanabiliriz:
+
+P(A|B) = P(B|A) * P(A) / P(B)
+
+Burada, P(A|B) grip aşısı yaptıran insanların grip olma olasılığını, P(B|A) grip olma olasılığının grip aşısı yaptırıp yaptırmadığına bağlı olarak değiştiğini, P(A) grip aşısı yaptırma olasılığını ve P(B) grip olma olasılığını göstermektedir.
+
+Bayes Teoremi, bir olayın gerçekleşme olasılığını belirlemek için kullanılan önemli bir matematiksel kavramdır. Özellikle makine öğrenimi ve istatistik alanlarında sıklıkla kullanılmaktadır. Bu teorem sayesinde, verileri kullanarak bir olayın gerçekleşme olasılığını belirleyebilir ve bu sayede doğruluğu artırılmış tahminler yapabiliriz.
+    
+    <p align="center"><img width="500"  src="Images/equation.png">
+      
+  
+P ( A | B )* = B olayı gerçekleştiğinde A olayının gerçekleşme olasılığı
+P ( A )* = A olayının gerçekleşme olasılığı
+P ( B | A )* = A olayı gerçekleştiğinde B olayının gerçekleşme olasılığı
+P ( B )* = B olayının gerçekleşme olasılığı
+    
+## Naive Bayes
+      
+  Naive Bayes sınıflandırma algoritması bir sınıflandırma yöntemidir. Bu algoritma, verilen bir girdi olayının hangi sınıfa ait olduğunu belirlemek için kullanılır. Algoritma, olasılık teoremine dayanarak çalışır ve verilen bir olayın sınıfına ait olma olasılığını hesaplar. Daha sonra en yüksek olasılığa sahip sınıfı seçer ve bu sınıfa atar.
+
+Naive bayes sınıflandırma algoritması, diğer sınıflandırma yöntemlerinden farklı olarak, girdi olaylarının her bir özelliğini bağımsız olarak değerlendirir. Bu nedenle algoritma "naive" (saf) bayes olarak adlandırılır. Bu yöntem, veri kümelerinde çok sayıda özellik olması durumunda daha hızlı çalışabilir.
+
+Algoritmanın çalışma prensibi şu şekildedir: Öncelikle, veri kümesinde bulunan tüm olayların sınıfları bilinir. Daha sonra, her bir olayın her bir özelliği için olasılık değerleri hesaplanır. Bu hesaplamalar, veri kümesinde bulunan tüm olayların sınıf dağılımlarına göre yapılır.
+
+Örneğin, bir veri kümesinde "hava durumu" ve "oyun durumu" gibi iki özellik bulunabilir. Bu veri kümesinde, her bir hava durumunun (güneşli, yağmurlu vb.) ve her bir oyun durumunun (kazanılan, kaybedilen vb.) olasılık değerleri hesaplanır. Daha sonra, bu olasılık değerleri kullanılarak verilen bir girdi olayının hangi sınıfa ait olma olasılığı hesaplanır. En yüksek olasılığa sahip sınıf seçilerek olay bu sınıfa atanır.
+
+Naive bayes sınıflandırma algoritması büyük veri kümeleri için oldukça etkili bir yöntem değildir. Bu algoritma, veri kümesinde bulunan özellikler arasındaki ilişkileri hesaba katmaz. Bu nedenle, büyük veri kümelerinde başarı oranı düşük olabilir. Ancak, algoritma hızlı çalışır ve küçük veri kümeleri için iyi sonuçlar verir.
+
+Naive bayes sınıflandırma algoritması, genellikle spam e-posta filtreleme, doküman sınıflandırma ve haber makalelerinin kategorilere ayırılması gibi uygulamalarda kullanılır. Örneğin, bir spam e-posta filtreleme sisteminde, bir e-posta mesajının spam olma olasılığı hesaplanır ve en yüksek olasılığa sahip sınıfa atanır. Bu sayede spam e-postalar ayıklanabilir.
+      
+## Naive Bayes Algoritmasının Avantajları 
+      
+- Naive-Bayes algoritması, basit bir yapıya sahiptir ve bu yapı sayesinde kullanımı kolaydır.
+- Naive-Bayes algoritması, veri kümelerindeki değişikliklere kolayca adapte olabilir ve bu sayede modelini güncel tutabilir.
+- Naive-Bayes algoritması, bulut bilişim teknolojileri gibi büyük veri ortamlarında kullanımı kolaydır.
+- Her özellik birbirinden bağımsız kabul edildiği için logistic regresyon gibi modellerden daha iyi performans gösterebilir.
+- Az veriyle iyi işler başarabilir.
+- Sürekli ve kesikli veriler ile kullanılabilir.
+      
+## Naive Bayes Algoritmasının Dezavantajları 
+      
+- Naive-Bayes algoritması, her bir özelliğin diğer özelliklerden bağımsız olduğu varsayımına dayanır. Bu varsayım, genellikle doğru değildir ve algoritmanın tahminlerinin yanlış olma riskini doğurabilir.
+- Naive-Bayes algoritması, sadece kategorik ve sayısal verileri işleyebilir. Bu nedenle, çok büyük ve karmaşık veri türlerini işleyemez ve kullanımı sınırlıdır.
+- Sıfır olasılık problemi ile karşı karşıya kalabilirsiniz. Sıfır olasılık istediğimiz örneğin veri setinde hiç bulunmaması durumudur. Yani herhangi bir işleme alındığında sonucu sıfır yapacaktır. Bunun için en basit yöntem tüm verilere minimum değer ekleyerek (genellikle 1) bu olasılık ortadan kaldırılabilir. Bu duruma Laplace kullanılarak tahminleme de denmektedir.
+      
+## Naive Bayes Algoritması Çeşitleri
+      
+**Gaussian Naive-Bayes:** Bu tür, sayısal verileri işleyebilen bir Naive-Bayes türüdür. Gaussian Naive-Bayes, her bir özelliğin dağılımının normal dağılım (Gaussian) olduğu varsayımına dayanır ve bu varsayım doğrultusunda tahminler yapar. 
+
+**Multinomial Naive-Bayes:** Bu tür, kategorik verileri işleyebilen bir Naive-Bayes türüdür. Multinomial Naive-Bayes, her bir özelliğin sınıflandırılması için kategorik olarak gruplandırıldığı varsayımına dayanır ve bu varsayım doğrultusunda tahminler yapar. 
+
+**Bernoulli Naive-Bayes:** Bu tür, iki kategorik değerden (örneğin, "var" ve "yok") oluşan verileri işleyebilen bir Naive-Bayes türüdür. Bernoulli Naive-Bayes, her bir özelliğin iki kategorik değer içerdiği varsayımına dayanır ve bu varsayım doğrultusunda tahminler yapar.
+      
+## Naive Bayes Algoritmasının Çalışma Mantığı 
+      
+Naive Bayes'in çalışma mantığı, Bayes teoremiyle ilgilidir. Bayes teoremi, verilen bir olayın gerçekleşme olasılığını belirli bir bilgiye göre hesaplamaya yarayan bir matematiksel kuraldır. Naive Bayes ise bu kuralı kullanarak veri kümesinde bulunan örneklerin sınıflarına göre öğrenme yapar.
+
+Not: Test kümesindeki bir değerin eğitim kümesinde gözlemlenemeyen bir değeri varsa olasılık değeri olarak 0 verir yani tahmin yapamaz. Bu durum genellikle Zero Frequency ( Sıfır Frekans ) adıyla bilinir. Bu durumu çözmek için düzeltme teknikleri kullanılabilir. En basit düzeltme tekniklerinden biri Laplace tahmini olarak bilinir.
+      
+<p align="center"><img width="500"  src="Images/table.png">
+  
+Yukarıdaki tablo örnek gösterilirse, her bir öznitelik ve her bir özniteliğin farklı değerleri için ”Play Golf” kolonundaki yes ve no değerleri oranına bakılır. Bu oranlar bayes teoremindeki yerlerine konularak gerekli işlemler yapılır ve sonucu yüksek gelen seçenek seçilir.
+  
+## Naive Bayes Algoritmasının Kullanım Alanları
+  
+- Spam e-posta filtreleme: Bir spam e-posta filtreleme sistemi, e-posta mesajlarını spam veya değil spam olarak sınıflandırır. Bu sınıflandırma, naive bayes algoritması kullanılarak yapılır.
+- Doküman sınıflandırma: Bir belge yönetim sistemi, belgeleri kategorilere göre sınıflandırır. Bu sınıflandırma, naive bayes algoritması kullanılarak yapılır.
+- Haber makalelerinin kategorilere ayırılması: Bir haber sitesi, makalelerini belirli kategorilere göre sınıflandırır. Bu sınıflandırma, naive bayes algoritması kullanılarak yapılır.
+- Naive Bayes sınıflandırıcısı, veri madenciliği ve benzeri alanlarda sınıflandırma görevlerinde etkili bir yöntemdir.
+- Naive Bayes, biyomedikal mühendislik ve hastalık ya da anormalliklerin tıbbi tanımlanmasında kullanılabilir.
+- Ayrıca, elektrokardiyografi ve elektroensefalografi grafiklerinin sınıflandırılmasında ve ayrıştırılmasında, genetik araştırmalarında da kullanılır.
+  
+## Naive Bayes Örnek Uygulama
+  
+Aşağıdaki durumlar gözlemlenerek, Outlook: Sunny Temperature: Hot Humidity: Normal Windy: False olduğu koşullarda Play Golf = ?
+  
+<p align="center"><img width="500"  src="Images/table.png">  <p align="center"><img width="500"  src="Images/table2.png">
+  
+
