@@ -1,4 +1,3 @@
-# BLM0362_NaiveBayes
 
 # Denetimli öğrenme sınıflandırma algoritmaları: Naive-Bayes nedir,çalışma mantığı nedir, kullanım alanları, örnekleri
 
@@ -41,7 +40,7 @@ Bayes Teoremi, Thomas Bayes tarafından geliştirilmiştir ve 1763 yılında yay
   
   <p align="center"><img width="500"  src="Images/thomas.png">
     
-    Bayes Teoremi, bir olayın gerçekleşme olasılığını belirlemek için iki temel koşula dayanır. Bunlar, olayın koşullu olasılığı ve olayın koşulsuz olasılığıdır. Koşullu olasılık, bir olayın belirli bir koşula bağlı olarak gerçekleşme olasılığıdır. Örneğin, insanın grip olma olasılığının grip aşısı yaptırıp yaptırmadığına bağlı olarak değiştiğini düşündüğümüzde, grip aşısı yaptıran insanların grip olma olasılığı koşullu olasılık olarak adlandırılır. Koşulsuz olasılık ise bir olayın koşul olmaksızın gerçekleşme olasılığıdır. Örneğin, insanların grip olma olasılığı koşulsuz olasılık olarak adlandırılır.
+  Bayes Teoremi, bir olayın gerçekleşme olasılığını belirlemek için iki temel koşula dayanır. Bunlar, olayın koşullu olasılığı ve olayın koşulsuz olasılığıdır. Koşullu olasılık, bir olayın belirli bir koşula bağlı olarak gerçekleşme olasılığıdır. Örneğin, insanın grip olma olasılığının grip aşısı yaptırıp yaptırmadığına bağlı olarak değiştiğini düşündüğümüzde, grip aşısı yaptıran insanların grip olma olasılığı koşullu olasılık olarak adlandırılır. Koşulsuz olasılık ise bir olayın koşul olmaksızın gerçekleşme olasılığıdır. Örneğin, insanların grip olma olasılığı koşulsuz olasılık olarak adlandırılır.
 
 Bayes Teoremi, koşullu olasılık ve koşulsuz olasılığı birleştirerek bir olayın gerçekleşme olasılığını belirleyen bir matematiksel ifadedir. Örneğin, grip aşısı yaptıran insanların grip olma olasılığını (P(A|B)) belirlemek istersek, Bayes Teoremi'ni kullanabiliriz. Bu durumda, Bayes Teoremi'ni şu şekilde kullanabiliriz:
 
@@ -51,13 +50,13 @@ Burada, P(A|B) grip aşısı yaptıran insanların grip olma olasılığını, P
 
 Bayes Teoremi, bir olayın gerçekleşme olasılığını belirlemek için kullanılan önemli bir matematiksel kavramdır. Özellikle makine öğrenimi ve istatistik alanlarında sıklıkla kullanılmaktadır. Bu teorem sayesinde, verileri kullanarak bir olayın gerçekleşme olasılığını belirleyebilir ve bu sayede doğruluğu artırılmış tahminler yapabiliriz.
     
-    <p align="center"><img width="500"  src="Images/equation.png">
+<p align="center"><img width="500"  src="Images/equation.png">
       
   
-P ( A | B )* = B olayı gerçekleştiğinde A olayının gerçekleşme olasılığı
-P ( A )* = A olayının gerçekleşme olasılığı
-P ( B | A )* = A olayı gerçekleştiğinde B olayının gerçekleşme olasılığı
-P ( B )* = B olayının gerçekleşme olasılığı
+*P ( A | B )* = B olayı gerçekleştiğinde A olayının gerçekleşme olasılığı
+*P ( A )* = A olayının gerçekleşme olasılığı
+*P ( B | A )* = A olayı gerçekleştiğinde B olayının gerçekleşme olasılığı
+*P ( B )* = B olayının gerçekleşme olasılığı
     
 ## Naive Bayes
       
@@ -102,7 +101,7 @@ Naive Bayes'in çalışma mantığı, Bayes teoremiyle ilgilidir. Bayes teoremi,
 
 Not: Test kümesindeki bir değerin eğitim kümesinde gözlemlenemeyen bir değeri varsa olasılık değeri olarak 0 verir yani tahmin yapamaz. Bu durum genellikle Zero Frequency ( Sıfır Frekans ) adıyla bilinir. Bu durumu çözmek için düzeltme teknikleri kullanılabilir. En basit düzeltme tekniklerinden biri Laplace tahmini olarak bilinir.
       
-<p align="center"><img width="500"  src="Images/table.png">
+<p align="center"><img width="400"  src="Images/table.png">
   
 Yukarıdaki tablo örnek gösterilirse, her bir öznitelik ve her bir özniteliğin farklı değerleri için ”Play Golf” kolonundaki yes ve no değerleri oranına bakılır. Bu oranlar bayes teoremindeki yerlerine konularak gerekli işlemler yapılır ve sonucu yüksek gelen seçenek seçilir.
   
@@ -119,6 +118,33 @@ Yukarıdaki tablo örnek gösterilirse, her bir öznitelik ve her bir özniteli�
   
 Aşağıdaki durumlar gözlemlenerek, Outlook: Sunny Temperature: Hot Humidity: Normal Windy: False olduğu koşullarda Play Golf = ?
   
-<p align="center"><img width="500"  src="Images/table.png">  <p align="center"><img width="500"  src="Images/table2.png">
+<p align="center"><img width="400"  src="Images/table.png">  <p align="center"><img width="400"  src="Images/table2.png">
   
+Burada her bir öznitelikteki durumlar için, “Play Golf” sınıfındaki karşılıkları gözlemlenir. 
+
+İlk olarak yapılması gereken “Play Golf” taki “Yes” ve “No” sınıflarıdır. İlk olarak bu sınıfların oranı gözlemlenir. Gördüğüm tabloda “Yes” oranı 9/14, “No” oranı ise “5/14” olarak bulunmuştur.
+
+Daha sonra ise her bir öznitelikteki farklı durumlar için P(Yes) ve P(No) durumları gözlemlenir ve bunlar oranlanır. Bu işlem her bir öznitelikteki her bir durum için ayrı ayrı yapılır.
+  
+<p align="center"><img width="600"  src="Images/solution1.png">
+    
+İlk olarak istenilen durumlar için “Yes” oranları alınır ve yukarıdaki işlem yapılır.
+  
+<p align="center"><img width="600"  src="Images/solution2.png">
+  
+Daha sonra ise aynı işlem “No” oranları için yapılır.
+  
+<p align="center"><img width="600"  src="Images/solution3.png">
+  
+İşlem sonuçları bu şekilde bulunur.
+    
+<p align="center"><img width="600"  src="Images/solution4.png">
+  
+Daha sonrasında P(Yes)/(P(Yes)+P(No)) ve P(No)/(P(Yes)+P(No)) işlemleri yapılır ve sonuçları gözlemlenir. Gözlemlenen sonuçlarda P(Yes) daha yüksek çıktığı için Play Golf = Yes sonucu bulunur.
+  
+## Zero Frequency Sorunu İçin Laplace Düzeltmesi Örneği
+  
+<p align="center"><img width="500"  src="Images/laplace.png">
+  
+Bu örnekte ise Spam = Yes ve Spam = No sınıflarından hangisine ait olduğunu çözmek için işlemler yapılıyor. TimeZone = EU için 0 sonucu alındığı için her bir öznitelik için pay ve paydaya eklemeler yapılır. Ve süreç baştan başlatılır. Bu olaya ise Laplace Düzeltmesi adı verilir.
 
