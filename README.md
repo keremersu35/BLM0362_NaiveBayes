@@ -9,3 +9,5 @@
 Denetimli öğrenim algoritması, veri kümesinde bulunan örneklerin etiketleri veya doğru cevapları bilinen bir yapay zeka algoritmasıdır. Bu algoritma, bu bilgileri kullanarak bir model eğitir ve daha sonra bu modele dayanarak veri kümesinde bulunan yeni örnekleri sınıflandırma veya tahmin etme işlemlerini yapar.
 
 Örneğin, bir denetimli öğrenme algoritması, resimlerdeki nesneleri tanımlamak için eğitilebilir. Bu algoritma, resimlerdeki nesnelerin etiketlerini veya doğru cevaplarını bilir ve bu bilgileri kullanarak bir model eğitir. Daha sonra bu modele dayanarak, yeni bir resim görüntülendiğinde, algoritma bu resimdeki nesneyi doğru bir şekilde tanımlayabilir.
+
+<p align="center"><img width="500"  src="Images/denetimli.png">
