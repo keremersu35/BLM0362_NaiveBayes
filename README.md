@@ -142,13 +142,13 @@ Daha sonra ise aynı işlem “No” oranları için yapılır.
   
 Daha sonrasında P(Yes)/(P(Yes)+P(No)) ve P(No)/(P(Yes)+P(No)) işlemleri yapılır ve sonuçları gözlemlenir. Gözlemlenen sonuçlarda P(Yes) daha yüksek çıktığı için Play Golf = Yes sonucu bulunur.
   
-##Zero Frequency Sorunu İçin Laplace Düzeltmesi Örneği
+## Zero Frequency Sorunu İçin Laplace Düzeltmesi Örneği
   
 <p align="center"><img width="500"  src="Images/laplace.png">
   
 Bu örnekte ise Spam = Yes ve Spam = No sınıflarından hangisine ait olduğunu çözmek için işlemler yapılıyor. TimeZone = EU için 0 sonucu alındığı için her bir öznitelik için pay ve paydaya eklemeler yapılır. Ve süreç baştan başlatılır. Bu olaya ise Laplace Düzeltmesi adı verilir.
 
-##Kaynakça
+## Kaynakça
 
 - [https://www.ibm.com/tr-tr/cloud/learn/machine-learning](https://www.ibm.com/tr-tr/cloud/learn/machine-learning)
 - [https://www.linkedin.com/pulse/alogoritmik-düşünme-denetimli-denetimsiz-ve-takviyeli-enes-öndeş/?originalSubdomain=tr](https://www.linkedin.com/pulse/alogoritmik-d%C3%BC%C5%9F%C3%BCnme-denetimli-denetimsiz-ve-takviyeli-enes-%C3%B6nde%C5%9F/?originalSubdomain=tr)
